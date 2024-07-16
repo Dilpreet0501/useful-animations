@@ -1,0 +1,107 @@
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+   
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+@keyframes chunk-top {
+    0%,
+    100% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(-80deg);
+    }
+}
+
+@keyframes chunk-bottom {
+    0%,
+    100% {
+        transform: rotate(-40deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes eating-path {
+   
+    20%, 80%{
+        opacity: 1;
+      }
+
+      100%{
+          transform: translate(-100px, -25%)
+      }
+}
+.pacman {
+    
+    position: relative;
+    background: transparent;
+    z-index: 10000;
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: -35px;
+        left: -140px;
+        display: block;
+        border-radius: 50%;
+        content: "";
+        height: 0px;
+        width: 0px;
+    }
+
+    &::before {
+        color: inherit;
+        animation: chunk-top .5s ease infinite;
+        border: 35px solid ;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+    &::after {
+        color: inherit;
+        animation: chunk-bottom .5s ease infinite;
+        border: 35px solid ;
+        border-right-color: transparent;
+        border-top-color: transparent;
+    }
+}
+
+
+.path{
+    float: left;
+    overflow: hidden !important;
+    z-index: 9999;
+}
+.path div{
+    background: inherit;
+  position: absolute;
+    top: 0;
+    left:0;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    animation: eating-path  0.5s linear infinite;
+}
+
+.path div:nth-child(1){
+    animation-delay: 0.5s;
+}
+
+.path div:nth-child(2){
+    animation-delay: 1s;
+}
+
+.path div:nth-child(3){
+    animation-delay: 1.5s;
+}
+
+.path div:nth-child(4){
+    animation-delay: 1s;
+}
