@@ -5,7 +5,7 @@ type PropsType = {
     loadcolor?: string;
     size?:string;
   };
-  const Rectangle=({ loadcolor='whitesmoke',size='3vmin'}:PropsType)=>{
+  const Square=({ loadcolor='whitesmoke',size='3vmin'}:PropsType)=>{
     const setStyle={
       '--loader-color': loadcolor,
       '--varsize':size
@@ -21,4 +21,4 @@ type PropsType = {
         </>
     )
   }
-  export {Rectangle}
+  export {Square}

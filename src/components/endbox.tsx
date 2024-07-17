@@ -1,12 +1,12 @@
 import * as React from 'react'
 import './endbox.css'
 type PropsType = {
-    borcolor?: string;
+    bordercolor?: string;
   
   };
-  const Endbox=({borcolor='whitesmoke'}: PropsType)=>{
+  const Endbox=({bordercolor='whitesmoke'}: PropsType)=>{
     const loaderStyle={
-        borderColor: borcolor,
+        borderColor: bordercolor,
     }
     return (
         <>

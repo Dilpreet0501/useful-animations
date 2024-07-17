@@ -4,7 +4,7 @@ type PropsType = {
     loadercolor?: string;
   
   };
-const Loader:React.FC<PropsType>=({loadercolor= '#555'}:PropsType )=>{
+const ThreedotLoader:React.FC<PropsType>=({loadercolor= '#555'}:PropsType )=>{
     const stcolor={
         color:loadercolor ,
     };
@@ -19,4 +19,4 @@ return (
 </>
 )
 }
-export {Loader}
+export {ThreedotLoader}

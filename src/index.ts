@@ -6,4 +6,4 @@ export * from "./components/rectangle";
 export * from "./components/scroll-watcher";
 export * from "./components/spinner";
 export * from "./components/squareloader";
-
+export * from "./components/simpleloader"
